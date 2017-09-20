@@ -2,6 +2,7 @@
 """Helper utilities and decorators."""
 from flask import flash, render_template, current_app
 
+
 def flash_errors(form, category="warning"):
     """Flash all errors for a form."""
     for field, errors in form.errors.items():
@@ -22,4 +23,3 @@ def render_extensions(template_path, **kwargs):
     return render_template(template_path,
                            _GOOGLE_ANALYTICS=current_app.config['GOOGLE_ANALYTICS'],
                            **kwargs)
-
