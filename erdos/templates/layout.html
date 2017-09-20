@@ -7,16 +7,18 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
+
 <html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
 
-    <title>{% block page_title %}
-
+    <title>
+        {% block page_title %}
         erdos
-
         {% endblock %}
     </title>
+
     <meta name="description" content="{% block meta_description %}{% endblock %}">
     <meta name="author" content="{% block meta_author %}{% endblock %}">
 
@@ -28,20 +30,26 @@
     <!--<link rel="stylesheet" href="{{ ASSET_URL }}">-->
     <!--{% endassets %}-->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov" crossorigin="anonymous">
 
     <script>{{ _GOOGLE_ANALYTICS }}</script>
 
     {% block css %}{% endblock %}
 
 </head>
+
 <body class="{% block body_class %}{% endblock %}">
 {% block body %}
 {% with form=form %}
 {% include "nav.html" %}
 {% endwith %}
 
-<header>{% block header %}{% endblock %}</header>
+<header>
+    {% block header %}
+    {% endblock %}
+</header>
+
 <div class="{% block content_class %}container{% endblock content_class %}">
 
     <div role="main">
@@ -72,6 +80,7 @@
 {% block js %}{% endblock %}
 <!-- end scripts -->
 {% endblock %}
+
 </body>
 </html>
 
