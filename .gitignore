@@ -1,4 +1,6 @@
 *.py[cod]
+*xml
+.idea/
 
 # C extensions
 *.so
